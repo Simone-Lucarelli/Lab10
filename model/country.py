@@ -15,3 +15,7 @@ class Country:
 
     def __hash__(self):
         return hash(self.ccode)
+
+    def __lt__(self, other):
+        if self.stateAbb < other.stateAbb:
+            return True
